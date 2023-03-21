@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>PBI ATM_PinChange</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<style type="text/css">
+    fieldset 
+    {
+    	margin-left:350px;
+    	
+		width:800px;
+		height: 400px;
+		background-color: olive;
+		text-align: center;
+	}
+	td
+	{
+		height: 50px;
+		padding: 20px;
+		padding-left:8px;
+		padding-top:20px;
+		font-size: x-large;
+		width: auto;
+	}
+	table
+	{
+		padding-left: 110px;
+	}
+	input
+	{
+		height: 30px;
+		text-align:center;
+		border-radius: 10px;
+	}
+	#sb
+	{
+		height: 60px;
+		width: auto;
+		background-color: green;
+		font-size: xx-large;
+	}
+    </style>
+    <script type="text/javascript">
+    var count=0;
+    function showHideO() 
+    {
+		count++;
+		if(count%2!=0)
+			{
+			 document.getElementById("op").type="text"
+			 document.getElementById("sym").innerHTML="🙈";
+			}
+		else
+			{
+			document.getElementById("op").type="password"
+			document.getElementById("sym").innerHTML="🐵";
+			}
+	}
+    var c=0;
+    function showHideN() 
+    {
+		c++;
+		if(c%2!=0)
+			{
+			 document.getElementById("np").type="text"
+			 document.getElementById("sm").innerHTML="🙈";
+			}
+		else
+			{
+			document.getElementById("np").type="password"
+			document.getElementById("sm").innerHTML="🐵";
+			}
+	}
+    </script>
+</head>
+<body style="background-color:rgb(125,145,254);">
+<br>
+<center>
+<h1>Pavan Bank Of India (PBI)</h1>
+<h2>ATM- Pin Change</h2>
+</center>
+<a href="ATM_Home_Interface.html"><img alt="No Image found" src="pk.jpg" style="width: 5%;border-radius: 20px;"></a>
+    <fieldset>
+    <form action="PinChange">
+    	<table>
+    	 <tr>
+    	 	<td>Enter Your Mobile Number</td>
+    	 	<td>:</td>
+    	 	<td><input name="mb" placeholder="Enter Mobile number" required></td>
+    	 	
+    	 </tr>
+    	 <tr>
+    	 	<td>Enter Your old 4 digits Pin</td>
+    	 	<td>:</td>
+    	 	<td><input name="op" required placeholder="Enter PIN number" type="password" id="op"></td>
+    	 	<td><span style="font-size: 50px;" onclick="showHideO()" id="sym">🐵</span></td>
+    	 </tr>
+    	 <tr>
+    	 	<td>Enter Your new 4 digits Pin</td>
+    	 	<td>:</td>
+    	 	<td><input name="np" placeholder="Enter PIN number" type="password" id="np"></td>
+    	 	<td><span style="font-size: 50px;" onclick="showHideN()" id="sm">🐵</span></td>
+    	 </tr>
+    	 <tr>
+    	 	<td colspan="2"><input type="submit" id="sb" value="Change PIN"></td>
+    	 	<td colspan="2">
+    	 	<a href="ThankYou.html">
+    	 	<input type="button" value="Cancel" style="height: 60px;width: auto;background-color: red;font-size: xx-large;">
+    	 	</a>
+    	 	</td>
+    	 </tr>
+    	</table>
+    </form>
+    
+    </fieldset>
+</body>
+</html>
